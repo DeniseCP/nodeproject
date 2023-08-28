@@ -165,3 +165,6 @@ dist
 
 #package lock json
 package-lock.json
+
+# not save bower_components
+**bower_components
