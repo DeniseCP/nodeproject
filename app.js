@@ -47,6 +47,14 @@ app.get('/', async (req, resp) => {
 
 });
 
+// Get Single Route
+app.get('/article/:id', (req, resp) => {
+    Article.findById(req.params.id)
+        .then((art) => resp.render('article', {
+            article: art
+        }))
+        .catch((err) => console.log(err));
+});
 
 // Add route
 app.get('/articles/add', (req, resp) => {
