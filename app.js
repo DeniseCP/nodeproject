@@ -56,6 +56,17 @@ app.get('/article/:id', (req, resp) => {
         .catch((err) => console.log(err));
 });
 
+// Load Edit Article Route
+
+app.get('/article/edit/:id', (req, resp) => {
+    Article.findById(req.params.id)
+        .then((art) => resp.render('edit_article', {
+            title: 'Edit Article',
+            article: art
+        }))
+        .catch((err) => console.log(err));
+});
+
 // Add route
 app.get('/articles/add', (req, resp) => {
     resp.render('add_article', {
