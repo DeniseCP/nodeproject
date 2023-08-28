@@ -9,6 +9,7 @@
   "author": "Denise Pereira",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "mongoose": "^7.4.5",
     "pug": "^3.0.2"
