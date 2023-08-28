@@ -33,6 +33,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+// Set Public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Home router
 app.get('/', async (req, resp) => {
     const articles = await Article.find({});

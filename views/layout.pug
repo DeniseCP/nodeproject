@@ -1,10 +1,33 @@
 doctype html
 html
     head
-    title Test Page
+    title Node Project
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/bower_components/normalize.css')
     body
-        block content
-        br
-        hr
-        footer
-        p Copyright &copy; 2023
+        nav.navbar.navbar.navbar-expand-md.navbar-dark.bg-dark
+            .container
+                .navbar-header
+                    a.navbar-brand(href='/') Node Project
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbar.collapse.navbar-collapse
+                    ul.nav.navbar-nav.mr-auto
+                        li.nav-item
+                            a.nav-link(href='/')| Home
+                        li.nav-item
+                            a.nav-link(href='/articles/add') Add Article
+
+        main(role='main').container
+            block content
+            br
+            hr
+            footer
+                p Copyright &copy; 2023
+
+        script(src='/bower_components/jquery/dist/jquery.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+            integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous')
+
