@@ -25,6 +25,8 @@ const app = express();
 
 // Bring in models
 let Article = require('./models/article');
+let User = require('./models/user');
+
 
 // Load View Engine
 app.set('views', path.join(__dirname, 'views'));
@@ -86,7 +88,10 @@ app.get('/', async (req, resp) => {
 
 // Route files
 let articles = require('./routes/articles');
+let users = require('./routes/users');
+
 app.use('/articles', articles);
+app.use('/users', users);
 
 // Start server
 app.listen(3000, () => {

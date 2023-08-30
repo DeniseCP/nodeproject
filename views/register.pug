@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST' action='/users/register')
+        .mb-3
+            label.form-label(for="name") Name:
+            input.form-control#name(name='name' type='text')
+        .mb-3
+            label.form-label(for="email") Email:
+            input.form-control#email(name='email' type='email')
+        .mb-3
+            label.form-label(for="username") Username:
+            input.form-control#username(name='username' type='text')
+        .mb-3
+            label.form-label(for="password") Password:
+            input.form-control#password(name='password' type='password')
+        .mb-3
+            label.form-label(for="cpassword") Confirm Password:
+            input.form-control#password(name='cpassword' type='password')
+        br
+        input.btn.btn-primary(type='submit' value='Submit')
