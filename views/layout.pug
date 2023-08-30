@@ -14,13 +14,18 @@ html
                 button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation')
                     span.navbar-toggler-icon
                 #navbar.collapse.navbar-collapse
-                    ul.nav.navbar-nav.mr-auto
+
+                    ul.nav.navbar-nav
                         li.nav-item
-                            a.nav-link(href='/')| Home
+                            a.nav-link(href='/') Home
                         li.nav-item
                             a.nav-link(href='/articles/add') Add Article
-                        li.nav-item
-                            a.nav-link(href='/users/register') Add User
+
+                ul.nav.navbar-nav.navbar-right.justify-content-end
+                    li.nav-item
+                        a.nav-link(href='/users/register') Register
+                    li.nav-item
+                        a.nav-link(href='/users/login') Login
         br
         main(role='main').container
             != messages('message', locals)

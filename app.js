@@ -6,9 +6,11 @@ const session = require('express-session');
 const messages = require('express-messages');
 const flash = require('connect-flash');
 const expressValidator = require('express-validator');
+const config = require('./config/database');
+const passport = require('passport');
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost/nodekb');
+mongoose.connect(config.database);
 let db = mongoose.connection;
 
 // Check for DB errors
@@ -74,6 +76,12 @@ const validatorOptions = {
     }
 };
 app.use(expressValidator(validatorOptions));
+
+// Passport Config
+require('./config/passport')(passport);
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Home router
 app.get('/', async (req, resp) => {
