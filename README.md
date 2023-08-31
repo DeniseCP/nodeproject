@@ -35,4 +35,4 @@ Explain how others can contribute to your project. If the tutorial series covers
 
 ## Acknowledgments
 
-Big shot out to [Brad](https://github.com/bradtraversy) from Traversy Media for the awesome tutorial!
+Big shout out to [Brad](https://github.com/bradtraversy) from Traversy Media for the awesome tutorial!
