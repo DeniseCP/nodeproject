@@ -1,38 +1,40 @@
 # Node Project
 
-This is a NodeJS project based on the series: [Node.js & Express From Scratch](https://www.youtube.com/playlist?list=PLillGF-RfqbYRpji8t4SxUkMxfowG4Kqp).
+Welcome to my Node.js project, which is based on the fantastic [Node.js & Express From Scratch](https://www.youtube.com/playlist?list=PLillGF-RfqbYRpji8t4SxUkMxfowG4Kqp) series.
 
+## Overview
 
+This Node.js application is designed with user-friendliness in mind, using Express.js, Mongoose, and MongoDB. Its primary purpose is to showcase my proficiency in Node.js and Express.js while demonstrating my adaptability to different programming languages and my ability to swiftly address version changes. For instance, while the tutorial used Mongoose version 4.10.2, I have upgraded to the latest version as of August 2023, which is 7.4.5.
 
-## Description
-
-Beginner friendly application made with NodeJS, ExpressJs, Mongoose and MongoDB.
-
-This is a simple application that that encompasses CRUD, user authentication, form validation, and verification and access control.
+The application offers essential features, including CRUD operations, user authentication, robust form validation, and meticulous access control and verification.
 
 ## Tutorial Source
 
-Link to the tutorial series: [Traversy Media](https://www.youtube.com/playlist?list=PLillGF-RfqbYRpji8t4SxUkMxfowG4Kqp).
+You can find the original tutorial series by [Traversy Media here](https://www.youtube.com/playlist?list=PLillGF-RfqbYRpji8t4SxUkMxfowG4Kqp).
 
 ## Getting Started
 
-Run `npm install` and create local database called `nodekb`.
+To get started:
+
+1. Run `npm install`.
+2. Create a local database called `nodekb`.
 
 ### Prerequisites
 
-- NodeJS ([latest](https://nodejs.org/en))
-- [VSCode](https://code.visualstudio.com/) or Similar text editor (in case you want to alter the code).
-- [MongoDB](https://www.mongodb.com/try/download/community)
+Before you begin, make sure you have the following installed:
 
+- [Node.js (latest version)](https://nodejs.org/en)
+- [VSCode](https://code.visualstudio.com/) or a similar text editor (if you plan to modify the code).
+- [MongoDB](https://www.mongodb.com/try/download/community)
 
 ### Installation
 
-Run `npm install` on the project folder using the command line.
+After meeting the prerequisites, run `npm install` in the project folder using the command line.
 
 ## Contributing
 
-Explain how others can contribute to your project. If the tutorial series covers collaboration or contributions, mention that here.
+If you're interested in contributing to this project, please provide guidelines and information on how others can contribute effectively.
 
 ## Acknowledgments
 
-Big shout out to [Brad](https://github.com/bradtraversy) from Traversy Media for the awesome tutorial!
+A huge thank you to [Brad](https://github.com/bradtraversy) from Traversy Media for creating the excellent tutorial series!
