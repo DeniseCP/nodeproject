@@ -18,8 +18,9 @@ html
                     ul.nav.navbar-nav
                         li.nav-item
                             a.nav-link(href='/') Home
-                        li.nav-item
-                            a.nav-link(href='/articles/add') Add Article
+                        if user
+                            li.nav-item
+                                a.nav-link(href='/articles/add') Add Article
 
                 ul.nav.navbar-nav.navbar-right.justify-content-end
                     if user

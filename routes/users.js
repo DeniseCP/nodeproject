@@ -83,9 +83,11 @@ router.post('/login', (req, res, next) => {
 });
 
 // Logout
-router.get('/logout', (req, res) => {
-    req.logout;
-    req.flash('success', 'You are logout');
-    res.redirect('/users/login');
+router.get('/logout', (req, res, next) => {
+    // @ts-ignore
+    req.logout(req.user, err => {
+        if (err) return next(err);
+        res.redirect("/");
+    });
 });
 module.exports = router;
