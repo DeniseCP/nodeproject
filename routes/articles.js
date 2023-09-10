@@ -7,7 +7,7 @@ let Article = require('../models/article');
 let User = require('../models/user');
 
 // Add route
-router.get('/add', ensureAuth, (req, resp) => {
+router.get('/add', ensureAuth, (_req, resp) => {
     resp.render('add_article', {
         title: 'Add Article',
     });
@@ -65,7 +65,7 @@ router.get('/edit/:id', ensureAuth, (req, resp, next) => {
     Article.findById(req.params.id)
         .then((art) => {
             // @ts-ignore
-            if (req.user?.id == art.author) {
+            if (req.user?.id === art.author) {
                 resp.render('edit_article', {
                     title: 'Edit Article',
                     article: art
@@ -99,10 +99,11 @@ router.post('/edit/:id', ensureAuth, (req, resp) => {
 // Delete Article
 router.delete('/:id', ensureAuth, async (req, resp) => {
     let query = { _id: req.params.id };
-    await Article.findById(req.params.id)
-        .then((err, article) => {
+
+    setTimeout(() => Article.findById(req.params.id)
+        .then((_err, article) => {
             // @ts-ignore
-            if (article.author != req.user?._id) {
+            if (article?.author !== req.user?._id) {
                 resp.status(500).send();
             } else {
                 Article.deleteOne(query)
@@ -111,7 +112,7 @@ router.delete('/:id', ensureAuth, async (req, resp) => {
                     })
                     .catch((err) => console.log(err));
             }
-        });
+        }), 1000);
 });
 
 // Access Control

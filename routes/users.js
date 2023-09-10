@@ -19,7 +19,7 @@ router.post('/register', (req, resp) => {
     const email = req.body.email;
     const username = req.body.username;
     const password = req.body.password;
-    const cpassword = req.body.cpassword;
+    const cpassword = req.body.cpassword; // used on form validation :29
 
     req.checkBody('name', 'Name is required').notEmpty();
     req.checkBody('email', 'Email is required').notEmpty();
@@ -44,7 +44,7 @@ router.post('/register', (req, resp) => {
             password: password
         });
 
-        bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.genSalt(10, (_err, salt) => {
             bcrypt.hash(newUser.password, salt, (error, hash) => {
                 if (error) {
                     console.log(error);
@@ -69,7 +69,7 @@ router.post('/register', (req, resp) => {
 
 
 // Login form
-router.get('/login', (req, res) => {
+router.get('/login', (_req, res) => {
     res.render('login');
 });
 

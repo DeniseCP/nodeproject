@@ -1,0 +1,21 @@
+{
+  "name": "node_project",
+  "description": "Simple knowledge base app\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[",
+  "main": "app.js",
+  "authors": ["Denise Pereira"],
+  "license": "ISC",
+  "homepage": "https://github.com/DeniseCP/nodeproject",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "bootstrap": "^5.3.1",
+    "normalize-css": "^8.0.1"
+  }
+}
