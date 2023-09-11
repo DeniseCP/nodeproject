@@ -37,4 +37,4 @@ If you're interested in contributing to this project, please provide guidelines 
 
 ## Acknowledgments
 
-A huge thank you to [Brad](https://github.com/bradtraversy) from Traversy Media for creating the excellent tutorial series!
+A huge thank you to [Brad](https://github.com/bradtraversy) from Traversy Media for creating the excellent tutorial series! And also to [Ricardo Saracino](https://github.com/ricardosaracino) for the code review!
